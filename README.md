@@ -24,4 +24,11 @@ The goal of this test is to identify the most important performance problems, ex
 
 Finally, on the Host code side, create 5 std::threads. Each thread execute's the same host code provided in the main function, N times in a loop. The goal is to allow the runtime to execute the 5xN kernel executions concurrently if possible.
 
-Use NSIGHT to see the results.
+Use NSIGHT to see the results if possible.
+
+If you don't own an NVIDIA GPU, you can use google colab, seting a GPU runtime type.
+
+To run cuda code more easily in google colab, execute this code:
+
+!pip install git+git://github.com/andreinechaev/nvcc4jupyter.git
+%load_ext nvcc_plugin
