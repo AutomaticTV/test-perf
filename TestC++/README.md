@@ -15,5 +15,5 @@ Now, here is a list of especific questions and actions we ask you to do:
 <ol>
 <li>Tell us what you understand about how the code works.</li>
 <li>Tell us whatever you know about CPU and GPU performance, that this code might positively or negatively affect.</li>
-<li>If you don't see the race condition looking at the code, then </li>
+<li>If you don't see the race condition looking at the code, then what would you do in order to find it? Write the code you would do to find it, and explain your reasoning.</li>
 </ol>
