@@ -8,7 +8,7 @@ You can use that cloned version to add the discussion or you can use a separate 
 
 Your version of the code should be available on the repository you created and shared with us.
 
-## First test, code discussion
+## First test, threaded C++ code
 
 We provide a CPU code that we know it has a race condition. 
 
