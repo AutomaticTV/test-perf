@@ -14,7 +14,7 @@ We provide a CPU code that we know it has a race condition.
 
 We consider that the race condition is quite tricky to find, and that is why we don't expect you to necessarily find it. But at least, we would like to see how you try to find it. Which steps, which experiments, and the reasoning behind them. Of course, if you find it just by looking at the code, just write down an explanation.
 
-You will find some more explanation in the 
+You will find some more explanation in the TestC++ folder.
 
 ## Second test, kernel optimization
 
