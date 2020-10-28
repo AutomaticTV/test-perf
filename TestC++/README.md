@@ -13,7 +13,8 @@ As we said in the main page, we have added a race condition to the code, that we
 
 Now, here is a list of especific questions and actions we ask you to do:
 <ol>
-<li>Tell us what you understand about how the code works.</li>
+<li>Tell us about our cmake files, if you are familiar with cmake. Would you do things differently? If you don't use cmake, how are you compiling our code?</li>
+<li>Tell us what you understand about how the C++ code works.</li>
 <li>Tell us whatever you know about CPU and GPU performance, that this code might positively or negatively affect.</li>
 <li>If you don't see the race condition looking at the code, then what would you do in order to find it? Write the code you would do to find it, and explain your reasoning.</li>
 </ol>
