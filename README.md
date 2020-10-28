@@ -31,4 +31,5 @@ If you don't own an NVIDIA GPU, you can use google colab, seting a GPU runtime t
 To run cuda code more easily in google colab, execute this code:
 
 !pip install git+git://github.com/andreinechaev/nvcc4jupyter.git
+
 %load_ext nvcc_plugin
