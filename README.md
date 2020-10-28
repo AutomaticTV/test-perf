@@ -1,6 +1,6 @@
 # CUDA and C++ Test
 
-The maing goal of this test is to understand and explain the provided codes, and their interaction with the hardware. The first test is a C++ CPU threaded code, that has a race condition we want you to try find, and the second one is a CUDA kernel that we want you to optimize and execute in order to know the speedup you achieved. The CUDA discussion is limited to Maxwell, Pascal or Turing architectures. The host code is done in C++.
+The maing goal of this test is to understand and explain the provided codes, and their interaction with the hardware. The first test is a C++ CPU threaded code, that has a race condition we want you to try to find, and the second one is a CUDA kernel that we want you to optimize and execute in order to know the speedup you achieved. The CUDA discussion is limited to Maxwell, Pascal or Turing architectures. The host code is done in C++.
 
 Please clone the repository into your github account, and give us acces so we can see your way of working with Git.
 
