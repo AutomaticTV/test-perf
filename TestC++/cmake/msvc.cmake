@@ -38,11 +38,3 @@ function(set_msvc_compiler_definitions TARGET_NAME)
                                                                                            # warnings about missing
                                                                                            # pdb's (out of our control)
 endfunction()
-
-#
-# This function makes executable CONSOLE-based in Debug and GUI-based in Release
-#
-function(set_msvc_executable_flags TARGET_NAME)
-    target_link_options(${TARGET_NAME} PUBLIC $<$<CONFIG:debug>:/SUBSYSTEM:CONSOLE>)
-    target_link_options(${TARGET_NAME} PUBLIC $<$<OR:$<CONFIG:release>,$<CONFIG:relwithdebinfo>>:/SUBSYSTEM:WINDOWS>)
-endfunction()
