@@ -1,21 +1,13 @@
-cmake_minimum_required (VERSION 3.17.0)
+cmake_minimum_required(VERSION 3.17)
 
-# Setting up the defaults
-include(cmake/cmake_init.cmake)
+project("atv-test-cpp" LANGUAGES CXX)
 
-project(Reproducer LANGUAGES CXX CUDA)
+find_package(CUDAToolkit REQUIRED)
 
-# CMake customizations and function definitions
-include(cmake/virtualfolders.cmake)
-include(cmake/build_sources_list.cmake)
-include(cmake/deploy_dependencies.cmake)
+file(GLOB_RECURSE SRCS src/*.h src/*.cpp)
 
-# Visual Studio specific things
-if (MSVC)
-    include(cmake/msvc.cmake)
-endif()
+add_executable(${PROJECT_NAME} ${SRCS})
 
-# External library configuration
-include(cmake/libs/cuda.cmake)
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
 
-add_subdirectory(src)
+target_link_libraries(${PROJECT_NAME} PRIVATE CUDA::cudart CUDA::cuda_driver)

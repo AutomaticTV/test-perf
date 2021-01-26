@@ -1,21 +1,13 @@
-cmake_minimum_required (VERSION 3.11.0)
+cmake_minimum_required(VERSION 3.17)
 
-####################################################################################################
-# macro to parse macro named arguments
-####################################################################################################
-include(cmake/parsearguments.cmake)
-include(cmake/virtualfolders.cmake)
+project("atv-test-cpp" LANGUAGES CXX CUDA)
 
-###############################
-#DeviceToDevice project
-###############################
-#name of the project 
-project(kernelColorConversion LANGUAGES CXX CUDA)
-include (cmake/cuda.cmake)
+find_package(CUDAToolkit REQUIRED)
 
+file(GLOB_RECURSE SRCS src/*.h src/*.cpp src/*.cu)
 
+add_executable(${PROJECT_NAME} ${SRCS})
 
-# avoid minRelSize/RelWithDebugInfo configurations
-set(CMAKE_CONFIGURATION_TYPES "Debug;Release;RelWithDebInfo" CACHE STRING "" FORCE)
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
 
-add_subdirectory(kernelColorConversion)
+target_link_libraries(${PROJECT_NAME} PRIVATE CUDA::cudart CUDA::cuda_driver)
