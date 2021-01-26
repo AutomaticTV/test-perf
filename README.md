@@ -18,18 +18,20 @@ You will find some more explanation in the TestC++ folder.
 
 ## Second test, kernel optimization
 
-In the folder kernelColorConversion you can find some code with a description.
+In the folder kernelColorConversion you can find some CUDA code with a description.
 
-The goal of this test is to identify the most important performance problems, explain them and implement a version that improves the execution times. It does matter what's the final speed of the code, but what matters the most is the discussion you provide, and that any minimal improvement works.
+The goal of this test is to identify the most important performance problems, explain them and (if you know CUDA) implement a version that improves the execution times. It does matter what's the final speed of the code, but what matters the most is the discussion you provide, and that any minimal improvement works.
 
 Finally, on the Host code side, create 5 std::threads. Each thread execute's the same host code provided in the main function, N times in a loop. The goal is to allow the runtime to execute the 5xN kernel executions concurrently if possible.
 
 Use NSIGHT to see the results if possible.
 
-If you don't own an NVIDIA GPU, you can use google colab, seting a GPU runtime type.
+If you don't own an NVIDIA GPU, you can use google colab, setting a GPU runtime type.
 
 To run cuda code more easily in google colab, execute this code:
 
+```
 !pip install git+git://github.com/andreinechaev/nvcc4jupyter.git
 
 %load_ext nvcc_plugin
+```
