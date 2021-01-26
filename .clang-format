@@ -1,9 +1,3 @@
-# AutomaticTV clang-format rules
-# Based on Google coding guidelines (with adjustments)
-
-# Configured with:
-# https://zed0.co.uk/clang-format-configurator/
-
 BasedOnStyle: Google
 AccessModifierOffset: -4
 AllowShortFunctionsOnASingleLine: Empty
